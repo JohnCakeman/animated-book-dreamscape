@@ -1,0 +1,77 @@
+
+import { Card, CardContent } from "@/components/ui/card";
+import { Star, Quote } from "lucide-react";
+
+const Reviews = () => {
+  const reviews = [
+    {
+      name: "Алексей Петров",
+      position: "CEO, TechStart",
+      text: "Благодаря этой книге я смог увеличить прибыль своей компании на 250% за год. Рекомендую всем предпринимателям!",
+      rating: 5,
+      avatar: "/placeholder.svg"
+    },
+    {
+      name: "Мария Иванова",
+      position: "Основатель Beauty Studio",
+      text: "Невероятно практичная книга! Каждая глава дает конкретные инструменты для роста бизнеса. Уже применяю советы.",
+      rating: 5,
+      avatar: "/placeholder.svg"
+    },
+    {
+      name: "Дмитрий Сидоров",
+      position: "Директор по развитию",
+      text: "Лучшая инвестиция в свое образование! Книга помогла мне по-новому взглянуть на управление командой.",
+      rating: 5,
+      avatar: "/placeholder.svg"
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-gray-100">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
+            Отзывы читателей
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Более 10,000 предпринимателей уже изменили свою жизнь с помощью этой книги
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {reviews.map((review, index) => (
+            <Card key={index} className="hover-scale">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <Quote className="w-8 h-8 text-yellow-500 mr-2" />
+                  <div className="flex gap-1">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                </div>
+                
+                <p className="text-gray-700 mb-6 italic">"{review.text}"</p>
+                
+                <div className="flex items-center">
+                  <img 
+                    src={review.avatar} 
+                    alt={review.name}
+                    className="w-12 h-12 rounded-full mr-4"
+                  />
+                  <div>
+                    <div className="font-bold text-gray-800">{review.name}</div>
+                    <div className="text-sm text-gray-600">{review.position}</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Reviews;
