@@ -1,25 +1,10 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Clock, Gift } from "lucide-react";
 
 const CTA = () => {
   return (
-    <section id="cta" className="relative py-20 overflow-hidden">
-      {/* Video Background */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="/анимация мишка.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-black/60"></div>
-      </div>
-
+    <section id="cta" className="relative py-20">
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center text-white animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">

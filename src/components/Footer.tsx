@@ -1,23 +1,8 @@
-
 import { BookOpen, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden">
-      {/* Video Background */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="/анимация мишка.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-black/80"></div>
-      </div>
-
+    <footer className="relative">
       <div className="relative z-10 py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-white">

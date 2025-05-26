@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Target, TrendingUp, Users } from "lucide-react";
 
@@ -31,21 +30,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="relative py-20 overflow-hidden">
-      {/* Video Background */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="/анимация мишка.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-black/70"></div>
-      </div>
-
+    <section id="about" className="relative py-20">
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">

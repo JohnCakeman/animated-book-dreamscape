@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown, BookOpen, Star } from "lucide-react";
 
@@ -9,20 +8,6 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="/анимация мишка.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-black/60"></div>
-      </div>
-
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         <div className="animate-fade-in">
