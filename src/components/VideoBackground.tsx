@@ -11,7 +11,7 @@ const VideoBackground = () => {
       >
         <source src="/анимация мишка.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-black/40"></div>
     </div>
   );
 };

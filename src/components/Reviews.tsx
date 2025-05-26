@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
 
@@ -27,8 +28,8 @@ const Reviews = () => {
   ];
 
   return (
-    <section className="relative py-20">
-      <div className="relative z-10 container mx-auto px-4">
+    <section className="py-20">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Отзывы читателей
