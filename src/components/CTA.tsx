@@ -5,8 +5,22 @@ import { CheckCircle, Clock, Gift } from "lucide-react";
 
 const CTA = () => {
   return (
-    <section id="cta" className="py-20 bg-gradient-to-r from-yellow-400 to-orange-500">
-      <div className="container mx-auto px-4">
+    <section id="cta" className="relative py-20 overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/анимация мишка.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/60"></div>
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center text-white animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Начните свой путь к успеху уже сегодня!
@@ -24,32 +38,32 @@ const CTA = () => {
             <p className="text-sm">Скидка действует только до конца месяца</p>
           </div>
 
-          <Card className="bg-white/95 backdrop-blur-sm mb-8 hover-scale">
-            <CardContent className="p-8 text-gray-800">
+          <Card className="bg-white/15 backdrop-blur-sm mb-8 hover-scale border-white/20">
+            <CardContent className="p-8 text-white">
               <h3 className="text-2xl font-bold mb-6">В стоимость входит:</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <CheckCircle className="w-5 h-5 text-green-400" />
                   <span>Электронная версия книги (PDF)</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <CheckCircle className="w-5 h-5 text-green-400" />
                   <span>Аудиоверсия книги (8 часов)</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <CheckCircle className="w-5 h-5 text-green-400" />
                   <span>Бонусные шаблоны и чек-листы</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <CheckCircle className="w-5 h-5 text-green-400" />
                   <span>Доступ к закрытому чату поддержки</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Gift className="w-5 h-5 text-yellow-500" />
+                  <Gift className="w-5 h-5 text-yellow-400" />
                   <span className="font-bold">БОНУС: Видеокурс "Первые шаги"</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Gift className="w-5 h-5 text-yellow-500" />
+                  <Gift className="w-5 h-5 text-yellow-400" />
                   <span className="font-bold">БОНУС: 30-дневная гарантия</span>
                 </div>
               </div>
@@ -59,14 +73,14 @@ const CTA = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-white text-yellow-600 hover:bg-gray-100 font-bold text-xl px-12 py-6 hover-scale"
+              className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-xl px-12 py-6 hover-scale"
             >
               Купить сейчас за 1990₽
             </Button>
             <Button 
               variant="outline" 
               size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-yellow-600 font-bold text-xl px-12 py-6 hover-scale"
+              className="border-2 border-white text-white hover:bg-white hover:text-black font-bold text-xl px-12 py-6 hover-scale"
             >
               Задать вопрос
             </Button>

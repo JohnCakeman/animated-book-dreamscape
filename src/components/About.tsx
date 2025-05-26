@@ -31,13 +31,27 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto px-4">
+    <section id="about" className="relative py-20 overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/анимация мишка.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/70"></div>
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             О книге "Секреты Успеха в Бизнесе"
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Эта книга — результат 15 лет опыта в бизнесе и анализа сотен успешных компаний. 
             Здесь собраны только работающие стратегии и проверенные методы.
           </p>
@@ -53,14 +67,14 @@ const About = () => {
           </div>
           
           <div className="animate-fade-in">
-            <h3 className="text-3xl font-bold mb-6 text-gray-800">
+            <h3 className="text-3xl font-bold mb-6 text-white">
               Что вы получите:
             </h3>
             <div className="space-y-4">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
-                  <span className="text-lg text-gray-700">{benefit}</span>
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                  <span className="text-lg text-gray-200">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -69,13 +83,13 @@ const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="text-center p-6 hover-scale">
+            <Card key={index} className="text-center p-6 hover-scale bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="pt-6">
                 <div className="flex justify-center mb-4">
                   {feature.icon}
                 </div>
-                <h4 className="text-xl font-bold mb-3 text-gray-800">{feature.title}</h4>
-                <p className="text-gray-600">{feature.description}</p>
+                <h4 className="text-xl font-bold mb-3 text-white">{feature.title}</h4>
+                <p className="text-gray-200">{feature.description}</p>
               </CardContent>
             </Card>
           ))}
