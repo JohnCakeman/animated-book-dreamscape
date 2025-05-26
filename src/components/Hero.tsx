@@ -18,7 +18,7 @@ const Hero = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="https://drive.google.com/uc?export=download&id=1RmRJwR1pCTQ8-y7yYrZmRyjwrIpmbx4H" type="video/mp4" />
+          <source src="/анимация мишка.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
